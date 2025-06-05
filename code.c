@@ -85,7 +85,7 @@ int main() {
             printf("Ticket Bill: Rs. %d\n", ticketBill);
 
         } else if (choice == 2) {
-            int foodChoice, more;
+            int foodChoice, more, quantity;
 
             do {
                 printf("\nFood Menu:\n");
@@ -102,16 +102,19 @@ int main() {
                 printf("Choose item: ");
                 scanf("%d", &foodChoice);
 
-                if (foodChoice == 1) foodBill += 50;
-                else if (foodChoice == 2) foodBill += 70;
-                else if (foodChoice == 3) foodBill += 60;
-                else if (foodChoice == 4) foodBill += 100;
-                else if (foodChoice == 5) foodBill += 50;
-                else if (foodChoice == 6) foodBill += 25;
-                else if (foodChoice == 7) foodBill += 30;
-                else if (foodChoice == 8) foodBill += 130;
-                else if (foodChoice == 9) foodBill += 30;
-                else if (foodChoice == 10) foodBill += 30;
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+
+                if (foodChoice == 1) foodBill += 50 * quantity;
+                else if (foodChoice == 2) foodBill += 70 * quantity;
+                else if (foodChoice == 3) foodBill += 60 * quantity;
+                else if (foodChoice == 4) foodBill += 100 * quantity;
+                else if (foodChoice == 5) foodBill += 50 * quantity;
+                else if (foodChoice == 6) foodBill += 25 * quantity;
+                else if (foodChoice == 7) foodBill += 30 * quantity;
+                else if (foodChoice == 8) foodBill += 130 * quantity;
+                else if (foodChoice == 9) foodBill += 30 * quantity;
+                else if (foodChoice == 10) foodBill += 30 * quantity;
                 else printf("Invalid item.\n");
 
                 printf("Add more? (1=Yes, 0=No): ");
